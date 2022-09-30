@@ -14,7 +14,7 @@ public:
     // Hàm nhập xuất
     void Nhap();
     void Xuat();
-    void XuatKetQua();
+    void XuatKetQuaThuc();
     PhanSo Cong(PhanSo &b);
     PhanSo Tru(PhanSo &b);
     PhanSo Nhan(PhanSo &b);
