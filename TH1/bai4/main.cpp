@@ -4,9 +4,11 @@
 //#include<string>
 int main()
 {
-    std::string a;
-    std::getline(std::cin,a);
-    std::cout<<a<<std::endl;
-
+    //std::string a;
+    //std::getline(std::cin,a);
+    //std::cout<<a<<std::endl;
+    TestCandidate a;
+    a.Nhap();
+    a.Xuat();
     return 0;
 }

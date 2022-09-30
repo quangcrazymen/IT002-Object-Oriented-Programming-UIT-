@@ -1,4 +1,3 @@
-#include "TestCandidate.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -20,12 +19,12 @@ void TestCandidate::Nhap()
         getline(std::cin, date);
         cout<< "Lần lượt nhập vào điểm Toán, Văn, Anh của SV: "<<endl;
         cin>>toan>>van>>anh;
-        newCandidate.getThongTinSV(ma,ten,date,toan,van,anh);
+        newCandidate.setThongTinSV(ma,ten,date,toan,van,anh);
         this->listSV.push_back(newCandidate);
     }
     // cin.ignore()
 }
 
 void TestCandidate::Xuat(){
-
+    cout<<listSV[0].getThongTinSV();
 }

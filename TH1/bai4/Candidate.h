@@ -12,8 +12,8 @@ private:
 
 public:
     void setThongTinSV(std::string ma, std::string ten, std::string date,
-                       int diemToan, int diemVan, int diemAnh);
-    void getThongTinSV();
-    void Nhap();
-    void Xuat();
+                       float diemToan, float diemVan, float diemAnh);
+    Candidate getThongTinSV();
+    // void Nhap();
+    // void Xuat();
 };
