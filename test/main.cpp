@@ -9,14 +9,20 @@
 // };
 // Dummy A;
 using namespace std;
+vector <int> test(){
+	vector<int> a{1,2,3,4};
+	return a;
+}
+
 int main()
 {
 	vector<int> numbers;
 	numbers.push_back(1);
 	numbers.push_back(4);
-	for (auto i = numbers.begin();i!=numbers.end();i++){
+	for (auto i = test().begin();i!=test().end();i++){
 		std::cout<<*i<<endl;
 	}
+	test();
 	// fraction *a = new fraction;
 	// a->import();
 	// cout << "Phan so sau khi rut gon la: ";
