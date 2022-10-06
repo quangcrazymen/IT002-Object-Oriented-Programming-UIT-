@@ -1,11 +1,12 @@
-// #include "Point.cpp" 
-// #include "Triangle.cpp"
+#include "Point.cpp" 
 #include<iostream>
+using namespace std;
+
 int main(){
-    // Point a(1,3);
-    // Point b(2,5);
-    // Point c(9,5);
-    // Triangle x(a,b,c);
-    std::cout<<"Hello world";
+    Point a(1,3);
+    Point b;
+    cout<<"Hãy nhập vào tọa độ của điểm B: "<<endl;
+    b.Nhap();
+    cout<<"Khoảng cách giữa 2 điểm là: "<<a.KhoangCach2Diem(b)<<endl;
     return 0;
 }

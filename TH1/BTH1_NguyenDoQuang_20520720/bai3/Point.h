@@ -6,12 +6,12 @@ private:
     float y;
 
 public:
-    // Point();
-    Point(float x = 0, float y = 0);
+    // Constructor
+    Point(float x=0 , float y=0 );
     ~Point();
 
     // Nhap
     void Nhap();
     void Xuat();
-    // float KhoangCach2Diem(Point &other);
+    float KhoangCach2Diem(Point &other);
 };

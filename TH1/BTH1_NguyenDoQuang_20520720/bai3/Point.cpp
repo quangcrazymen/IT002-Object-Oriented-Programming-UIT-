@@ -1,14 +1,11 @@
 #include "Point.h"
+#include <math.h> 
 using namespace std;
-// Point::Point(){
-//     x =0;
-//     y=0;
-// }
 
 Point::Point(float x, float y)
 {
-    x = x;
-    y = y;
+    this->x = x;
+    this->y = y;
 }
 
 Point::~Point()
@@ -27,7 +24,7 @@ void Point::Xuat()
 {
     cout<<"tọa độ là: ("<<x<<", "<<y<<")"<<endl;
 }
-// float Point::KhoangCach2Diem(Point &other)
-// {
-//     return other;
-// }
+float Point::KhoangCach2Diem(Point &other)
+{
+    return sqrt(pow(this->x-other.x,2)+pow(this->y-other.y,2));
+}

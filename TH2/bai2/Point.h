@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 class Point
 {
 private:
@@ -7,8 +8,14 @@ private:
 
 public:
     // Constructor
-    Point(float x=0 , float y=0 );
+    Point(float x=0 , float y=0);
     ~Point();
+
+    //Hàm get set tọa 
+    float getX();
+    float getY();
+
+    //Hàm tịnh tiến
 
     // Nhap
     void Nhap();
