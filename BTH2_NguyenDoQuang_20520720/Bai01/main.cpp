@@ -8,7 +8,7 @@ int main(){
 //     int num =2;
 //     std::string c = to_string(num) + a;
 //     cout<<c<<endl;
-    NhanVien a("NguyenQuang",12);
+    NhanVien a("NguyenQuang",1234);
     a.Xuat();
     return 0;
 }
