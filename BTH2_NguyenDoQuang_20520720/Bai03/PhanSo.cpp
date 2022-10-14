@@ -1,6 +1,4 @@
 #include "PhanSo.h"
-#include <iostream>
-#include <numeric>
 
 PhanSo::PhanSo(){
     this->tuSo = 0;

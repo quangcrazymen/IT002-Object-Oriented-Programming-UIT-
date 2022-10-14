@@ -1,4 +1,5 @@
 #include "MangMotChieu.h"
+
 using namespace std;
 // MangMotChieu::MangMotChieu(/* args */)
 // {
@@ -9,19 +10,32 @@ void MangMotChieu::setArray(vector<int> a)
     this->mang = a;
 }
 
-MangMotChieu MangMotChieu::randomArray(int)
+MangMotChieu MangMotChieu::randomArray(int num=0)
 {
+    // if number of element(s) is not specified, generate ramdom number of element(s)
+    random_device rand;
+    if(!num){
+        // Generate number of element(s) from 1 -> 99
+        num=(rand()%100)+1;
+    }
+    // push element(s) in the array
+    vector <int> result;
+    for(auto i=0;i<num;i++){
+        // push integers from 0 and 1000
+        result.push_back(rand()%1000);
+    }
     MangMotChieu temp;
-    this->setArray(vector<int>{5,2,47,1, 3, 5,2,1});
-    temp.setArray(vector<int>{1, 3, 5,2,1});
+    this->setArray(result);
+    temp.setArray(result);
     return temp;
 }
 
 void MangMotChieu::xuat() const
 {
     for(auto i=this->mang.begin();i!=mang.end();i++){
-        cout << *i<<endl;
+        cout << *i<<" ";
     }
+    cout<<endl;
 }
 
 // Đếm số lần xuất hiện x trong mảng

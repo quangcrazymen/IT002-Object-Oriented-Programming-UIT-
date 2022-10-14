@@ -4,6 +4,8 @@
 #include<iterator>
 #include<string>
 #include<math.h>
+#include<random>
+#include<cstdlib>
 
 using namespace std;
 class MangMotChieu

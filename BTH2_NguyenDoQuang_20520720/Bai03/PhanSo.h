@@ -1,3 +1,6 @@
+#include <iostream>
+#include <numeric>
+
 class PhanSo
 {
 private:
