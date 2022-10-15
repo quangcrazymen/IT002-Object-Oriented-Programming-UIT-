@@ -1,5 +1,7 @@
 #include <iostream>
-
+#include <memory>
+#include<limits>
+#include<algorithm>
 class DSPhanSo
 {
 private:
@@ -15,14 +17,14 @@ public:
     // Xuất danh sách phân số
     void outputList();
     // Tính tổng các phân số
-    void sumOfFraction();
+    PhanSo sumOfFraction();
     // Tìm phân số lớn nhất
-    void biggestFraction();
+    PhanSo* biggestFraction();
     // Tìm phân số nhỏ nhất
-    void smallestFraction();
+    PhanSo* smallestFraction();
     // Sắp xếp danh sách phân số tăng dần
-    void sortAscList();
+    DSPhanSo sortAscList();
     // Sắp xếp danh sách phân số giảm dần
-    void sortDscList();
+    DSPhanSo sortDscList();
     ~DSPhanSo();
 };

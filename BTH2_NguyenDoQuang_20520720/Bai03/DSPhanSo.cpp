@@ -21,32 +21,62 @@ void DSPhanSo::outputList(){
     for (auto i=0;i<this->size;i++){
         this->list[i].Xuat();
     }
-    cout<<sizeof(this->list);
-    cout<<sizeof(PhanSo);
 }
 // Tính tổng các phân số
-void DSPhanSo::sumOfFraction(){
-
+PhanSo DSPhanSo::sumOfFraction(){
+    PhanSo sum;
+    for (auto i=0;i<this->size;i++){
+        sum = sum.Cong(this->list[i]);
+    }
+    return sum;
 }
 // Tìm phân số lớn nhất
-void DSPhanSo::biggestFraction(){
+PhanSo* DSPhanSo::biggestFraction(){
+    float max= -numeric_limits<float>::max();
+    int maxIdx=0;
+    for (auto i=0;i<this->size;i++){
+        if((this->list[i].getNumerator()*1.0/this->list[i].getDenominator())>max){
+            max = (this->list[i].getNumerator()/this->list[i].getDenominator())*1.0;
+            maxIdx=i;
+        }
+    }
+    return this->list+maxIdx;
 
 }
 // Tìm phân số nhỏ nhất
-void DSPhanSo::smallestFraction(){
-
+PhanSo* DSPhanSo::smallestFraction(){
+    float min= numeric_limits<float>::max();
+    int minIdx=0;
+    for (auto i=0;i<this->size;i++){
+        if((this->list[i].getNumerator()*1.0/this->list[i].getDenominator())<min){
+            min = (this->list[i].getNumerator()/this->list[i].getDenominator())*1.0;
+            minIdx=i;
+        }
+    }
+    return this->list+minIdx;
 }
+
+// WRITE A CUSTOM MERGE SORT !!
+
 // Sắp xếp danh sách phân số tăng dần
-void DSPhanSo::sortAscList(){
+DSPhanSo DSPhanSo::sortAscList(){
+    float floatList[this->size];
+    // cout<<this->size;
+    // cout<<sizeof(floatList);
+    for (auto i=0;i<this->size;i++){
+        // get the float value of the fractions list
+        float floatValue = (this->list[i].getNumerator()*1.0/this->list[i].getDenominator());
+        floatList[i] = floatValue;
+        
+    }
 
 }
 // Sắp xếp danh sách phân số giảm dần
-void DSPhanSo::sortDscList(){
+DSPhanSo DSPhanSo::sortDscList(){
 
 }
 
 DSPhanSo::~DSPhanSo()
 {
-    // free(this->list);
     cout<<"DSPhanSo is terminated"<<endl;
 }

@@ -6,7 +6,7 @@ PhanSo::PhanSo(){
 }
 
 PhanSo::~PhanSo(){
-    std::cout<<"Phan So terminated!"<<std::endl;
+    //std::cout<<"Phan So terminated!"<<std::endl;
 }
 
 PhanSo::PhanSo(int n){
@@ -22,6 +22,26 @@ PhanSo::PhanSo(const PhanSo &other){
     this->tuSo = other.tuSo;
     this->mauSo = other.mauSo;
 }
+
+// Getter and setter
+void PhanSo::setFraction(int tu,int mau){
+    this->tuSo=tu;
+    this->mauSo=mau;
+}
+// string PhanSo::getFraction(){
+//     retu
+// }
+int PhanSo::getNumerator() const{
+    return this->tuSo;
+}
+int PhanSo::getDenominator() const{
+    return this->mauSo;
+}
+
+float PhanSo::getFloatValue() const{
+    return (this->tuSo/this->mauSo)*1.0;
+}
+
 
 void PhanSo::Xuat()
 {

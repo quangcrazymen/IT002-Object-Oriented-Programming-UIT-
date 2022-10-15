@@ -12,9 +12,14 @@ public:
     PhanSo();
     PhanSo(int n);
     PhanSo(int tu, int mau);
+    // getter and setter
+    void setFraction(int,int);
+    int getNumerator() const;
+    int getDenominator() const;
+    float getFloatValue() const;
+    // string getFraction();
     //Copy constructor
     PhanSo(const PhanSo &other);
-
     // Hàm nhập xuất
     void Nhap();
     void Xuat();
