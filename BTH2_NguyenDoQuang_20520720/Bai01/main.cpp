@@ -4,11 +4,12 @@
 
 using namespace std;
 int main(){
-//     std::string a = "Nguyen";
-//     int num =2;
-//     std::string c = to_string(num) + a;
-//     cout<<c<<endl;
     NhanVien a("NguyenQuang",1234);
-    a.Xuat();
+    a.xuat();
+    NhanVien b("ThanhCk",600,"600ThanhCk","Quan ly",1.5);
+    b.xuat();
+    NhanVien c;
+    c.nhap();
+    c.xuat();
     return 0;
 }

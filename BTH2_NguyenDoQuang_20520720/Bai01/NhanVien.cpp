@@ -1,5 +1,34 @@
 #include "NhanVien.h"
 using namespace std;
+
+// Getter and setter
+string NhanVien::getHoTen(){
+    return this->hoVaTen;
+}
+void NhanVien::setHoTen(string ten){
+    this->hoVaTen = ten;
+}
+int NhanVien::getNgay(){
+    return this->ngayLamViec;
+}
+void NhanVien::setNgay(int ngay){
+    this->ngayLamViec = ngay;
+}
+//Default constructor
+NhanVien::NhanVien():hoVaTen("Unknown"),ngayLamViec(0){
+
+}
+
+//Phương thức tạo lập với 5 tham số:
+NhanVien::NhanVien(std::string hoVaTen,int ngay,std::string ma,std::string chucDanh,float heSoLuong){
+    this->hoVaTen = hoVaTen;
+    this->ngayLamViec = ngay;
+    this->maNhanVien = ma;
+    this->chucDanh = chucDanh;
+    this->heSoLuong = heSoLuong;
+}
+
+//Phương thức tạo lập với 2 tham số:
 NhanVien::NhanVien(std::string hoVaTen,int ngay)
 {
     this->hoVaTen = hoVaTen;
@@ -31,7 +60,24 @@ NhanVien::NhanVien(std::string hoVaTen,int ngay)
     }
 }
 
-void NhanVien::Xuat(){
+// Hãy viết phương thức để nhập và xuất thông tin lớp Nhân Viên
+void NhanVien::nhap(){
+    cout<<"Nhập họ và tên nhân viên: ";
+    cin.ignore();
+    getline(cin,hoVaTen);
+    cout<<"Nhập ngày làm việc nhân viên: ";
+    cin>>this->ngayLamViec;
+    cout<<"Nhập mã số nhân viên: ";
+    cin.ignore();
+    getline(cin,this->maNhanVien);
+    cout<<"Nhập chức danh nhân viên: ";
+    cin.ignore();
+    getline(cin,this->chucDanh);
+    cout<<"Nhập hệ số lương nhân viên: ";
+    cin>>heSoLuong;
+}
+
+void NhanVien::xuat(){
     cout<<"Họ và tên nhân viên: "<<this->hoVaTen<<endl;
     cout<<"Ngày làm việc nhân viên: "<<this->ngayLamViec<<endl;
     cout<<"Mã số nhân viên: "<<this->maNhanVien<<endl;
@@ -39,6 +85,7 @@ void NhanVien::Xuat(){
     cout<<"Hệ số lương nhân viên: "<<this->heSoLuong<<endl;
 }
 
+// Phương thức hủy Nhân Viên
 NhanVien::~NhanVien()
 {
     cout<<"Nhan Vien terminated!"<<endl;

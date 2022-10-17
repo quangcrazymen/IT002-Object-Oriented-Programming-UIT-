@@ -9,18 +9,22 @@ private:
     std::string chucDanh;
     float heSoLuong;
 public:
+    // Default constructor
+    NhanVien();
     //Constructor with 5 variables
     NhanVien(std::string hoVaTen,int,std::string,std::string chucDanh,float heSoLuong);
     //Constructor with 2 varibles
     NhanVien(std::string hoVaTen,int);
     // getter and setter
     std::string getHoTen();
+    void setHoTen(std::string);
+    int getNgay();
+    void setNgay(int);
     // Copy constructor
     
-    int getNgay();
     // Input and output
-    void Nhap();
-    void Xuat();
+    void nhap();
+    void xuat();
     ~NhanVien();
 };
 

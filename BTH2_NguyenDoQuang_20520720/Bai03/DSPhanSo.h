@@ -10,7 +10,7 @@ private:
     int size;
 
 public:
-    // DSPhanSo(/* args */);
+    // Use default constructor
     // setter and getter
     // Viết chương trình cho phép người dùng nhập vào danh sách các phân số
     void inputList();
@@ -23,8 +23,9 @@ public:
     // Tìm phân số nhỏ nhất
     PhanSo* smallestFraction();
     // Sắp xếp danh sách phân số tăng dần
-    DSPhanSo sortAscList();
+    void sortAscList();
     // Sắp xếp danh sách phân số giảm dần
-    DSPhanSo sortDscList();
+    void sortDscList();
+
     ~DSPhanSo();
 };

@@ -1,9 +1,10 @@
 #include "MangMotChieu.h"
 
 using namespace std;
-// MangMotChieu::MangMotChieu(/* args */)
-// {
-// }
+MangMotChieu::MangMotChieu(vector <int> array)
+{
+    this->mang = array;
+}
 
 void MangMotChieu::setArray(vector<int> a)
 {

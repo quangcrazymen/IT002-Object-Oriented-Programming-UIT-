@@ -13,7 +13,8 @@ class MangMotChieu
 private:
     vector <int> mang; 
 public:
-    // MangMotChieu(/* args */);
+    // Constructor
+    MangMotChieu(vector <int> array = vector<int>{});
     //getter và setter
     vector <int> getArray();
     void setArray(vector<int>);

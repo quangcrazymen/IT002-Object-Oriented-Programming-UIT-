@@ -39,18 +39,18 @@ int PhanSo::getDenominator() const{
 }
 
 float PhanSo::getFloatValue() const{
-    return (this->tuSo/this->mauSo)*1.0;
+    return (this->tuSo*1.0/this->mauSo);
 }
 
 
-void PhanSo::Xuat()
+void PhanSo::xuat()
 {
     std::cout << "Phân số là: ";
     (this->mauSo ==1)?std::cout<<this->tuSo<<std::endl:std::cout << this->tuSo << "/" << this->mauSo << std::endl;
 
 }
 
-void PhanSo::Nhap()
+void PhanSo::nhap()
 {
     std::cout << "Hãy nhập vào tử số " << std::endl;
     std::cin >> this->tuSo;
@@ -63,7 +63,7 @@ void PhanSo::Nhap()
     this->mauSo = mau;
 }
 
-void PhanSo::XuatKetQuaThuc()
+void PhanSo::xuatKetQuaThuc()
 {
     std::cout<<"Kết quả số thực là: ";
     std::cout << (tuSo * 1.0) / mauSo << std::endl;
@@ -131,4 +131,11 @@ PhanSo PhanSo::Chia(PhanSo &b)
     result.mauSo = mau;
 
     return result;
+}
+
+// Greater or equal
+bool PhanSo::greaterOrEqual(PhanSo &b){
+    if(this->getFloatValue()>b.getFloatValue())
+        return true;
+    return false;
 }

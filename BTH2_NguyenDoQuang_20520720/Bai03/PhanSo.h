@@ -21,13 +21,15 @@ public:
     //Copy constructor
     PhanSo(const PhanSo &other);
     // Hàm nhập xuất
-    void Nhap();
-    void Xuat();
-    void XuatKetQuaThuc();
+    void nhap();
+    void xuat();
+    void xuatKetQuaThuc();
     PhanSo Cong(PhanSo &b);
     PhanSo Tru(PhanSo &b);
     PhanSo Nhan(PhanSo &b);
     PhanSo Chia(PhanSo &b);
+    // check if first fraction is GREATER OR EQUAL than second fraction
+    bool greaterOrEqual(PhanSo &b);
     // Destructor
     ~PhanSo();
 
