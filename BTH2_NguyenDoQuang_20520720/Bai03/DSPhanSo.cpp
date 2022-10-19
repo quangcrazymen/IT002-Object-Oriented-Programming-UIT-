@@ -79,7 +79,6 @@ static void Merge(PhanSo *A, int low, int mid, int high,bool asc=false){
 // Sắp xếp danh sách phân số tăng dần
 // Using CUSTOM MERGE SORT
 void DSPhanSo::sortAscList(){
-    DSPhanSo temp;
     int p;
     for (p=2; p<this->size; p=p*2){
         for (int i=0; i+p-1<this->size; i=i+p){
@@ -95,7 +94,6 @@ void DSPhanSo::sortAscList(){
 }
 // Sắp xếp danh sách phân số giảm dần
 void DSPhanSo::sortDscList(){
-    DSPhanSo temp;
     int p;
     for (p=2; p<this->size; p=p*2){
         for (int i=0; i+p-1<this->size; i=i+p){
@@ -112,5 +110,6 @@ void DSPhanSo::sortDscList(){
 
 DSPhanSo::~DSPhanSo()
 {
-    // cout<<"DSPhanSo is terminated"<<endl;
+    delete [] this->list;
+    cout<<"DSPhanSo is terminated"<<endl;
 }
