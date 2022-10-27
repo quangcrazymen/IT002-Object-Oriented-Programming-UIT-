@@ -8,7 +8,7 @@ private:
 public:
     // LopHoc(/* args */);
     //Thêm một học sinh mới vào trong danh sách học sinh
-    void addStudent(HocSinh &newStudent);
+    void addStudent(HocSinh newStudent);
     //Xóa một học sinh đã có trong danh sách khỏi danh sách học sinh,
     void deleteStudent(string name);
     //Xuất toàn bộ thông tin tất cả học sinh trong lớp học
@@ -17,7 +17,7 @@ public:
     void outputGoodStudents();
     //
     
-    ~LopHoc();
+    // ~LopHoc();
 };
 
 

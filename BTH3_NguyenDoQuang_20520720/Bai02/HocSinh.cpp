@@ -4,12 +4,11 @@ using namespace std;
 void HocSinh::input()
 {
     cout << "Nhập vào Họ và tên: ";
-    cin.ignore();
     getline(cin, name);
     cout << "Nhập vào mã số sinh viên: ";
     getline(cin, id);
     cout << "Nhập vào điẹn thoại: ";
-    getline(cin, id);
+    getline(cin, phoneNum);
     cout << "Nhập vào điểm trung bình: ";
     cin >> averageScore;
 }
@@ -20,4 +19,3 @@ void HocSinh::output()
     cout << "Điện thoại: " << this->phoneNum << endl;
     cout << "Điểm trung bình: " << this->averageScore << endl;
 }
-

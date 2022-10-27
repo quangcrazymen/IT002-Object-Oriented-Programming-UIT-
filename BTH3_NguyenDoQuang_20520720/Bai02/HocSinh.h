@@ -1,7 +1,6 @@
 #include<string>
 #include<iostream>
 #include<regex>
-
 class HocSinh
 {
 private:
@@ -16,12 +15,16 @@ private:
 public:
     HocSinh(/* args */);
     ~HocSinh();
+    void output();
+    void input();
 };
 
 HocSinh::HocSinh(/* args */)
 {
+
 }
 
 HocSinh::~HocSinh()
 {
+
 }
