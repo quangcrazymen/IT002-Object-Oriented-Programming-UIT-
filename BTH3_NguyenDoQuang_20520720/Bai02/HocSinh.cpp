@@ -1,5 +1,23 @@
 #include "HocSinh.h"
 using namespace std;
+// Construtor
+
+HocSinh::HocSinh(string name="Nguyen Van A",string id="21521467",string phoneNum="4562478942",float score=0.0){
+    this->name=name;
+    this->id=id;
+    this->phoneNum=phoneNum;
+    this->averageScore=score;
+}
+
+// getter and setter
+string HocSinh::getName(){
+    return this->name;
+}
+
+float HocSinh::getAverageScore(){
+    return this->averageScore;
+}
+
 
 void HocSinh::input()
 {

@@ -12,19 +12,23 @@ private:
     std::string phoneNum;
     // Điểm trung bình
     float averageScore;
+
 public:
-    HocSinh(/* args */);
-    ~HocSinh();
+    HocSinh(std::string name,std::string id,std::string phoneNum,float score);
+    // ~HocSinh();
+    // getter and setter
+    std::string getName();
+    float getAverageScore();
     void output();
     void input();
 };
 
-HocSinh::HocSinh(/* args */)
-{
+// HocSinh::HocSinh(/* args */)
+// {
 
-}
+// }
 
-HocSinh::~HocSinh()
-{
+// HocSinh::~HocSinh()
+// {
 
-}
+// }

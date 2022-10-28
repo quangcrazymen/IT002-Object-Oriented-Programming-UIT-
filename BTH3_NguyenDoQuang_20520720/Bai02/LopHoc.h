@@ -8,7 +8,9 @@ private:
 public:
     // LopHoc(/* args */);
     //Thêm một học sinh mới vào trong danh sách học sinh
-    void addStudent(HocSinh newStudent);
+    void addStudent(HocSinh &newStudent);
+    // Tìm một sinh viên trong danh sách
+    int findStudent(string);
     //Xóa một học sinh đã có trong danh sách khỏi danh sách học sinh,
     void deleteStudent(string name);
     //Xuất toàn bộ thông tin tất cả học sinh trong lớp học

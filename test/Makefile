@@ -1,7 +1,7 @@
 CFLAGS = -std=c++17 -O2
 
-VulkanTest: main5.cpp
-	g++ $(CFLAGS) -o VulkanTest main5.cpp
+VulkanTest: main.cpp
+	g++ $(CFLAGS) -o VulkanTest main.cpp
 .PHONY: test clean
 
 test: VulkanTest
