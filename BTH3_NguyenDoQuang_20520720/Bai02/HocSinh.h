@@ -14,6 +14,7 @@ private:
     float averageScore;
 
 public:
+    
     HocSinh(std::string name,std::string id,std::string phoneNum,float score);
     // ~HocSinh();
     // getter and setter
@@ -23,10 +24,6 @@ public:
     void input();
 };
 
-// HocSinh::HocSinh(/* args */)
-// {
-
-// }
 
 // HocSinh::~HocSinh()
 // {

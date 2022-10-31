@@ -29,6 +29,10 @@ void HocSinh::input()
     getline(cin, phoneNum);
     cout << "Nhập vào điểm trung bình: ";
     cin >> averageScore;
+    while(averageScore<0.0 || averageScore>10.f){
+        cout<<"Nhập lại điểm: ";
+        cin>>averageScore;
+    }
 }
 void HocSinh::output()
 {

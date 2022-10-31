@@ -18,17 +18,70 @@ float HocSinh::getAverageScore(){
     return this->averageScore;
 }
 
+bool idValidation(string id){
+    if(id.length()!=8){
+        return 0;
+    }
+    // ASCII table: https://www.w3resource.com/cpp-exercises/for-loop/cpp-for-loop-exercise-61.php
+    for(auto &i:id){
+        if(i<48||i>57){
+            return 0;
+        }
+    }
+    return 1;
+}
 
+bool phoneValidation(string phone){
+    if(phone.length()<9||phone.length()>11){
+        return 0;
+    }
+    // ASCII table: https://www.w3resource.com/cpp-exercises/for-loop/cpp-for-loop-exercise-61.php
+    for(auto &i:phone){
+        if(i<48||i>57){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+bool nameValidation(string name){
+    // ASCII table: https://www.w3resource.com/cpp-exercises/for-loop/cpp-for-loop-exercise-61.php
+    for(auto &i:name){
+        if((i==32)&&(64<i<91)&&(96<i<123)){
+            continue;
+        }
+        else{
+            return 0;
+        }
+    }
+    return 1;
+}
 void HocSinh::input()
 {
     cout << "Nhập vào Họ và tên: ";
     getline(cin, name);
+    if(!nameValidation(name)){
+        cout << "Nhập lại Họ và tên: ";
+        getline(cin, name);
+    }
     cout << "Nhập vào mã số sinh viên: ";
     getline(cin, id);
+    while(!idValidation(id)){
+        cout << "Nhập lại mã số sinh viên: ";
+        getline(cin, id);
+    }
     cout << "Nhập vào điẹn thoại: ";
     getline(cin, phoneNum);
+    while(!phoneValidation(phoneNum)){
+        cout << "Nhập lại điện thoại: ";
+        getline(cin, phoneNum);
+    }
     cout << "Nhập vào điểm trung bình: ";
     cin >> averageScore;
+    while(averageScore<0.0 || averageScore>10.f){
+        cout<<"Nhập lại điểm: ";
+        cin>>averageScore;
+    }
 }
 void HocSinh::output()
 {
