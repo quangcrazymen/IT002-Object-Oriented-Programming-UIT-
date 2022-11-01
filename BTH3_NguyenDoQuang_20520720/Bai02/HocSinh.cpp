@@ -47,7 +47,7 @@ bool phoneValidation(string phone){
 bool nameValidation(string name){
     // ASCII table: https://www.w3resource.com/cpp-exercises/for-loop/cpp-for-loop-exercise-61.php
     for(auto &i:name){
-        if((i==32)&&(64<i<91)&&(96<i<123)){
+        if((i==32)||(i>64&&i<91)||(i>96&&i<123)){
             continue;
         }
         else{
@@ -60,7 +60,7 @@ void HocSinh::input()
 {
     cout << "Nhập vào Họ và tên: ";
     getline(cin, name);
-    if(!nameValidation(name)){
+    while(!nameValidation(name)){
         cout << "Nhập lại Họ và tên: ";
         getline(cin, name);
     }

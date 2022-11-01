@@ -7,8 +7,13 @@ int main(){
         cout<<i<<endl;
     }
     string test="0";
-    if(test[0]==48)
+    if(test[0]>64&&test[0]<97)
+    {
+
         cout<<"TRUE"<<endl;
-    else
+    }
+    else{
         cout<<"FALSE"<<endl;
+
+    }
 }
