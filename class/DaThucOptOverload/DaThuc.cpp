@@ -1,16 +1,26 @@
 #include "DaThuc.h"
 using namespace std;
+// Hàm khởi tạo mặc định
 DaThuc::DaThuc():degree(0)
 {
-
     this->listOfa = unique_ptr<float[]>(new float[1]);
     this->listOfa[0] = 0;
-    // else{
-    //     this->listOfa = unique_ptr<float[]>(new float[degree]);
-    //     for(int i=0;i<this->degree;i++){
-    //         this->listOfa[i]=0;
-    //     }
-    // }
+}
+// Khởi tạo đa thức bậc n
+DaThuc::DaThuc(int degree){
+    this->listOfa = unique_ptr<float[]>(new float[degree]);
+    for(int i=0;i<this->degree;i++){
+        this->listOfa[i]=0;
+    }
+}
+
+// Tính giá trị của đa thức khi biết giá trị của x
+float DaThuc::getPolinomialY(float x){
+    float result;
+    for(auto i=0;i<=this->degree;i++){
+        result+=this->listOfa[i]*pow(x,i);
+    }
+    return result;
 }
 
 // Nhập đa thức
@@ -27,7 +37,7 @@ void DaThuc::inputPolinomial(){
         listOfa[i]=a;
     }
 }
-
+// dùng operator>>
 istream& operator>>(istream &is, DaThuc &other){
     cout<<"Hãy nhập và bậc của đa thức: ";
     int degree;
@@ -40,6 +50,7 @@ istream& operator>>(istream &is, DaThuc &other){
     }
     return is;
 }
+
 // Xuất đa thức
 void DaThuc::outputPolinomial(){
     string polinomial;
@@ -49,7 +60,7 @@ void DaThuc::outputPolinomial(){
     }
     cout<<polinomial+to_string(this->listOfa[0])<<endl;
 }
-
+// dùng operator<<
 ostream& operator<<(ostream &os,DaThuc &other){
     string polinomial;
     cout<<"Xuất ra đa thức: ";
@@ -59,14 +70,7 @@ ostream& operator<<(ostream &os,DaThuc &other){
     os<<polinomial+to_string(other.listOfa[0])<<endl;
     return os;
 }
-// Tính giá trị của đa thức khi biết giá trị của x
-float DaThuc::getPolinomialY(float x){
-    float result;
-    for(auto i=0;i<=this->degree;i++){
-        result+=this->listOfa[i]*pow(x,i);
-    }
-    return result;
-}
+
 // Cộng hai đa thức
 DaThuc DaThuc::operator+(DaThuc& other){
     int numberOfLoop = this->degree<=other.degree?this->degree:other.degree;
@@ -85,6 +89,7 @@ DaThuc DaThuc::operator+(DaThuc& other){
     }
     return result;
 }
+
 // Trừ hai đa thức
 DaThuc DaThuc::operator-(DaThuc& other){
     int numberOfLoop = this->degree<=other.degree?this->degree:other.degree;
@@ -110,7 +115,3 @@ DaThuc DaThuc::operator-(DaThuc& other){
     }
     return result;
 }
-
-// DaThuc::~DaThuc()
-// {
-// }

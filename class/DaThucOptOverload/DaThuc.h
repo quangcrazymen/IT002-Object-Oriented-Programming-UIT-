@@ -8,13 +8,14 @@
 class DaThuc
 {
 private:
-    // Bậc của đa thức:
     // Using smart pointer
     std::unique_ptr <float[]> listOfa;
+    // Bậc của đa thức:
     int degree;
 public:
     // Phương thức khởi tạo một đa thức có bậc bằng 0, và đa thức bậc n
     DaThuc();
+    DaThuc(int);
     // Nhập đa thức
     void inputPolinomial();
     friend std::istream& operator>>(std::istream& is, DaThuc& other);
@@ -29,5 +30,4 @@ public:
     DaThuc operator+(DaThuc&);
     // Trừ hai đa thức
     DaThuc operator-(DaThuc&);
-    // ~DaThuc();
 };
