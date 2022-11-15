@@ -1,5 +1,8 @@
 #include<numeric>
 #include<iostream>
+#include<ostream>
+#include<istream>
+using namespace std;
 class PhanSo
 {
 private:
@@ -8,11 +11,16 @@ private:
 
 public:
     PhanSo(int tu,int mau);
-    // ~PhanSo();
-    PhanSo operator=(const PhanSo&other);
+    // Input and Output
+    friend istream& operator>> (istream &is,PhanSo &ps);
+    friend ostream& operator<< (ostream &os,PhanSo &ps);
+    // Basic operations
+    PhanSo& operator=(const PhanSo&other);
     PhanSo operator+(const PhanSo&other);
     PhanSo operator-(const PhanSo&other);
     PhanSo operator*(const PhanSo&other);
+    PhanSo operator/(const PhanSo&other);
+
     PhanSo& operator+=(const PhanSo&other);
     PhanSo& operator-=(const PhanSo&other);
     PhanSo& operator*=(const PhanSo&other);
@@ -23,7 +31,7 @@ public:
     bool operator<=(const PhanSo&other);
     bool operator>=(const PhanSo&other);
     bool operator!=(const PhanSo&other);
-    // Pha
+    // Display
     void display();
     ~PhanSo();
 };
