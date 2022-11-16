@@ -13,18 +13,14 @@ public:
     friend istream& operator>> (istream &is,MangSoNguyen &sn);
     friend ostream& operator<< (ostream &os,MangSoNguyen &sn);
 
+    MangSoNguyen& operator=(const MangSoNguyen&);
     // MangSoNguyen& operator=(const MangSoNguyen&sn);
     MangSoNguyen operator+(const MangSoNguyen&sn);
     // MangSoNguyen operator++();
     
+    MangSoNguyen& operator++(int x);
+    MangSoNguyen& operator--(int x);
+
     MangSoNguyen(/* args */);
     ~MangSoNguyen();
 };
-
-MangSoNguyen::MangSoNguyen(/* args */)
-{
-}
-
-MangSoNguyen::~MangSoNguyen()
-{
-}

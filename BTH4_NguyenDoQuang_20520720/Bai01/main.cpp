@@ -16,5 +16,6 @@ int main()
     cout << c;
     c = a / b;
     cout << c;
-
+    c+=b;
+    cout<<c;
 }

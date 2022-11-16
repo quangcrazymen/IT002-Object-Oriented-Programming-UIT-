@@ -25,12 +25,17 @@ public:
     PhanSo& operator-=(const PhanSo&other);
     PhanSo& operator*=(const PhanSo&other);
     PhanSo& operator/=(const PhanSo&other);
+    // Comparasion operations
     bool operator==(const PhanSo&other);
     bool operator>(const PhanSo&other);
     bool operator<(const PhanSo&other);
     bool operator<=(const PhanSo&other);
     bool operator>=(const PhanSo&other);
     bool operator!=(const PhanSo&other);
+    // Increment and Decrement by 1 operations
+    PhanSo& operator++(int);
+    PhanSo& operator--(int);
+
     // Display
     void display();
     ~PhanSo();

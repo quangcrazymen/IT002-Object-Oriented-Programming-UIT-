@@ -2,6 +2,18 @@
 
 using namespace std;
 
+
+MangSoNguyen::MangSoNguyen(/* args */)
+{
+
+}
+
+MangSoNguyen::~MangSoNguyen()
+{
+
+}
+
+
 istream& operator>> (istream &is,MangSoNguyen &sn){
     cout<<"Nhập vào số phần tử của mảng: ";
     is>>sn.kichthuoc;
@@ -21,6 +33,11 @@ ostream& operator<< (ostream &os,MangSoNguyen &sn){
     cout<<"\n";
     return os;
 }
+
+MangSoNguyen& MangSoNguyen::operator=(const MangSoNguyen&){
+
+}
+
 
 MangSoNguyen MangSoNguyen::operator+(const MangSoNguyen&sn){
     int smaller=this->kichthuoc>=sn.kichthuoc?sn.kichthuoc:this->kichthuoc;
@@ -51,4 +68,18 @@ MangSoNguyen MangSoNguyen::operator+(const MangSoNguyen&sn){
         }
     }
     return result;
+}
+
+MangSoNguyen& MangSoNguyen::operator++(int x){
+    for(int i=0;i<this->kichthuoc;i++){
+        this->dulieu[i]+=1;
+    }
+    return *this;
+}
+
+MangSoNguyen& MangSoNguyen::operator--(int x){
+    for(int i=0;i<this->kichthuoc;i++){
+        this->dulieu[i]-=1;
+    }
+    return *this;
 }

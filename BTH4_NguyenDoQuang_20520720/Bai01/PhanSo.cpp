@@ -103,16 +103,91 @@ PhanSo PhanSo::operator/(const PhanSo&b){
     return result;
 }
 
-// PhanSo& PhanSo::operator+=(const PhanSo&other);
-// PhanSo& PhanSo::operator-=(const PhanSo&other);
-// PhanSo& PhanSo::operator*=(const PhanSo&other);
-// PhanSo& PhanSo::operator/=(const PhanSo&other);
-// bool PhanSo::operator==(const PhanSo&other);
-// bool PhanSo::operator>(const PhanSo&other);
-// bool PhanSo::operator<(const PhanSo&other);
-// bool PhanSo::operator<=(const PhanSo&other);
-// bool PhanSo::operator>=(const PhanSo&other);
-// bool PhanSo::operator!=(const PhanSo&other);
+PhanSo& PhanSo::operator+=(const PhanSo&b){
+    int tu = *this->tuSo * *b.mauSo + *b.tuSo * (*this->mauSo);
+    int mau = *this->mauSo * (*b.mauSo);
+    // Hàm gcd có trong thư viên <numeric> sử dụng g++ 9.4.0 flag C++ 17 để  compile code
+    // GDC: GREATEST COMMON DIVISOR - ƯỚC CHUNG LỚN NHẤT
+    auto gcd = std::gcd(tu, mau);
+    *this->tuSo = tu / gcd;
+    *this->mauSo= mau / gcd;
+    return *this;
+}
+PhanSo& PhanSo::operator-=(const PhanSo&b){
+    int tu = *this->tuSo * *b.mauSo - *b.tuSo * *this->mauSo;
+    int mau = *this->mauSo * *b.mauSo;
+    // Hàm gcd có trong thư viên <numeric> sử dụng g++ 9.4.0 flag C++ 17 để  compile code
+    // GDC: GREATEST COMMON DIVISOR - ƯỚC CHUNG LỚN NHẤT
+    auto gcd = std::gcd(tu, mau);
+    *this->tuSo = tu / gcd;
+    *this->mauSo= mau / gcd;
+    return *this;
+}
+PhanSo& PhanSo::operator*=(const PhanSo&b){
+    int tu = *this->tuSo * *b.tuSo;
+    int mau = *this->mauSo * *b.mauSo;
+    // Hàm gcd có trong thư viên <numeric> sử dụng g++ 9.4.0 flag C++ 17 để  compile code
+    // GDC: GREATEST COMMON DIVISOR - ƯỚC CHUNG LỚN NHẤT
+    auto gcd = std::gcd(tu, mau);
+    *this->tuSo = tu / gcd;
+    *this->mauSo= mau / gcd;
+    return *this;
+}
+PhanSo& PhanSo::operator/=(const PhanSo&b){
+    int tu = *this->tuSo * *b.mauSo;
+    int mau = *this->mauSo * *b.tuSo;
+    // Hàm gcd có trong thư viên <numeric> sử dụng g++ 9.4.0 flag C++ 17 để  compile code
+    // GDC: GREATEST COMMON DIVISOR - ƯỚC CHUNG LỚN NHẤT
+    auto gcd = std::gcd(tu, mau);
+    *this->tuSo = tu / gcd;
+    *this->mauSo= mau / gcd;
+    return *this;
+}
+bool PhanSo::operator==(const PhanSo&ps){
+    int result = *this->tuSo**ps.mauSo - *this->mauSo**ps.tuSo;
+    if(result == 0){
+        return true;
+    }
+    return false;
+}
+bool PhanSo::operator>(const PhanSo&ps){
+    int result = *this->tuSo**ps.mauSo - *this->mauSo**ps.tuSo;
+    if(result > 0){
+        return true;
+    }
+    return false;
+}
+bool PhanSo::operator<(const PhanSo&ps){
+    int result = *this->tuSo**ps.mauSo - *this->mauSo**ps.tuSo;
+    if(result < 0){
+        return true;
+    }
+    return false;
+}
+bool PhanSo::operator<=(const PhanSo&ps){
+    int result = *this->tuSo**ps.mauSo - *this->mauSo**ps.tuSo;
+    if(result <= 0){
+        return true;
+    }
+    return false;
+}
+bool PhanSo::operator>=(const PhanSo&ps){
+    int result = *this->tuSo**ps.mauSo - *this->mauSo**ps.tuSo;
+    if(result >= 0){
+        return true;
+    }
+    return false;
+}
+bool PhanSo::operator!=(const PhanSo&ps){
+    int result = *this->tuSo**ps.mauSo - *this->mauSo**ps.tuSo;
+    if(result != 0){
+        return true;
+    }
+    return false;
+}
+
+
+
 void PhanSo::display(){
     cout<<*this->tuSo<<"/"<<*this->mauSo;
 }
