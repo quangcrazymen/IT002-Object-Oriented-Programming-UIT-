@@ -5,15 +5,6 @@ PhanSo::PhanSo(int tu,int mau){
     mauSo=new int(mau);
 }
 
-// PhanSo::PhanSo(const PhanSo& other){
-//     tuSo = new int(*other.tuSo);
-//     mauSo = new int(*other.mauSo);
-// }
-// PhanSo::PhanSo(int *tu,int *mau){
-//     this->tuSo=tu;
-//     this->mauSo=mau;
-// }
-
 PhanSo& PhanSo::operator=(const PhanSo&ps){
     if(this==&ps){
         return *this;
@@ -186,7 +177,18 @@ bool PhanSo::operator!=(const PhanSo&ps){
     return false;
 }
 
-
+PhanSo& PhanSo::operator++(int){
+    PhanSo temp(1,1);
+    temp=*this+PhanSo(1,1);
+    *this=temp;
+    return *this;
+}
+PhanSo& PhanSo::operator--(int){
+    PhanSo temp(1,1);
+    temp=*this-PhanSo(1,1);
+    *this=temp;
+    return *this;
+}
 
 void PhanSo::display(){
     cout<<*this->tuSo<<"/"<<*this->mauSo;

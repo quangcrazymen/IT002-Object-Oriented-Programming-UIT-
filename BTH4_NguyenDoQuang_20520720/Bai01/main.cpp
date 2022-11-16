@@ -18,4 +18,6 @@ int main()
     cout << c;
     c+=b;
     cout<<c;
+    cout<<c--;
+    cout<<c++;
 }
