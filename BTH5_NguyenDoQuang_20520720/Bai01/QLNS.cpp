@@ -1,21 +1,32 @@
-for(int i =0;i<n;i++){
+#include "QLNS.h"
+
+void nhap(){
+    int n;
     cout<<"So Nhan su:";
     cin>>n;
-    NhanSu *tmp;
-    switch (expression)
-    {
-    case 1:
-        tmp =new GiangVien();
-        break;
-    case 2:
-        tmp =new TroGiang();
-        break;
-    default:
-        break;
-    }
+    for(int i =0;i<n;i++){
+        cout<<"Giảng viên nhập,trợ giảng, nghiên cứu viên, chuyên viên? {1, 2, 3, 4}:";
+        int option;cin>>option;
+        NhanSu *tmp;
+        switch (option)
+        {
+        case 1:
+            tmp =new GiangVien();
+            break;
+        case 2:
+            tmp =new TroGiang();
+            break;
+        case 3: 
+            tmp=new NghienCuuVien();
+        case 4:
+            tmp=new ChuyenVien();
+        default:
+            break;
+        }
+        tmp->nhap();
 }
 
-float tinhLuong();
+
 
 void QLNS::xuat(){
     for(NhanSu* nhansu:dsNhanSu){

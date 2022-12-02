@@ -8,3 +8,8 @@ NghienCuuVien::NghienCuuVien(int kn,vector<string> duAn){
     this->duAnNghienCuu = duAn;
     this->knNghienCuu=kn;
 }
+
+void NghienCuuVien::nhap(){
+    NhanSu::nhap();
+    
+}

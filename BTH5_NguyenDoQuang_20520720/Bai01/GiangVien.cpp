@@ -24,4 +24,5 @@ void GiangVien::xuat(){
 
 GiangVien::~GiangVien()
 {
+    
 }

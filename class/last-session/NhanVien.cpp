@@ -1,4 +1,4 @@
-#include "NhanSu.h"
+#include "NhanVien.h"
 using namespace std;
 
 // global function to calculate number of certain project type
@@ -12,34 +12,29 @@ static int numberOfXProject(char pro,vector<string>&list){
     return count;
 }
 
-NhanSu::NhanSu(string ten="",string date="",string ma="")
+NhanVien::NhanVien(string ten="",string date="",string ma="")
 {
     this->name = ten;
     this->date = date;
-    this->maNhanSu = ma;
 }
 
-string NhanSu::getName(){
+string NhanVien::getName(){
     return this->name;
 }
 
-void NhanSu::nhap(){
+void NhanVien::nhap(){
     cin.ignore();
     cout<<"Nhập tên: ";
     getline(cin,this->name);
     cout<<"Nhập ngày sinh: ";
     getline(cin,this->date);
-    cout<<"Nhập tên: ";
-    getline(cin,this->maNhanSu);
 }
 
-void NhanSu::xuat(){
+void NhanVien::xuat(){
     cout<<"Tên: "<<this->name<<'\n';
     cout<<"Ngày sinh: "<<this->date<<'\n';
-    cout<<"Mã nhân sự: "<<this->maNhanSu<<'\n';
 }
 
-NhanSu::~NhanSu()
+NhanVien::~NhanVien()
 {
-    
 }
