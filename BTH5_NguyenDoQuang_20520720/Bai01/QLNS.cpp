@@ -1,6 +1,8 @@
 #include "QLNS.h"
 
-void nhap(){
+using namespace std;
+
+void QLNS::nhap(){
     int n;
     cout<<"So Nhan su:";
     cin>>n;
@@ -24,6 +26,7 @@ void nhap(){
             break;
         }
         tmp->nhap();
+        this->dsNhanSu.push_back(tmp);
 }
 
 

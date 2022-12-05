@@ -8,13 +8,13 @@ protected:
     std::string name;
     std::string date;
 public:
-    NhanVien(string ten,string date,string ma);
+    NhanVien(string ten,string date);
     // getter and setter
     string getName();
     // input and output
     void nhap();
     void xuat();
-    virtual float tinhLuong()=0;
+    virtual long tinhLuong()=0;
     ~NhanVien();
 };
 

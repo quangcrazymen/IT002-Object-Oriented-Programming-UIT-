@@ -1,5 +1,5 @@
 #include <iostream>
-#include<vector>
+#include <vector>
 #include "NhanSu.cpp"
 #include "GiangVien.cpp"
 #include "TroGiang.cpp"

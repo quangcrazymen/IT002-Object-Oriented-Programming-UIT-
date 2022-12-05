@@ -9,7 +9,20 @@ string hocVi,int nam, vector<string>list=vector<string>(1,"")):NhanSu(name,date,
 }
 // Nhập, xuất
 void GiangVien::nhap(){
-
+    NhanSu:nhap();
+    cout<<"Nhập học hàm:";
+    getline(cin,this->hocHam);
+    cout<<"Nhập vào học vị";
+    getline(cin,this->hocVi);
+    cout<<"Năm giảng dạy";
+    cin>>this->namGiangDay;
+    cout<<"Nhập vào số môn học:";
+    string subject;
+    int n;cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>subject;
+        this->danhSachMonHoc.push_back(subject);
+    }
 }
 
 void GiangVien::xuat(){
@@ -20,9 +33,9 @@ void GiangVien::xuat(){
     // cout<<"Học hàm là:"<<this->hocHa<<'\n';
     // output names of subjects
     //Luong this->tinh luong
+    for(auto i:this->danhSachMonHoc){
+        cout<<i<<' ';
+    }
+    cout<<'\n';
 }
 
-GiangVien::~GiangVien()
-{
-    
-}

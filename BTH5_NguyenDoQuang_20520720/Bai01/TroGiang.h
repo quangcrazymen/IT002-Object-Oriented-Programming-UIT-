@@ -5,7 +5,6 @@ private:
     int soMonTroGiang;
 public:
     TroGiang(/* args */);
-    ~TroGiang();
     void nhap();
     void xuat();
     float tinhLuong(){
@@ -14,9 +13,5 @@ public:
 };
 
 TroGiang::TroGiang(/* args */)
-{
-}
-
-TroGiang::~TroGiang()
 {
 }

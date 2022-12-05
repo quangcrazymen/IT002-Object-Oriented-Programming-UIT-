@@ -6,6 +6,8 @@ private:
     vector<string> duAnGiaoDuc;
     int knLamViec;
 public:
+    void nhap();
+    void xuat();
     ChuyenVien(/* args */);
     int numberOfTProject(){
         int count=0;
@@ -19,7 +21,6 @@ public:
     float tinhLuong(){
         return (knLamViec*4+numberOfXProject('T',this->duAnGiaoDuc))*18000;
     }
-    ~ChuyenVien();
 };
 
 

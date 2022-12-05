@@ -1,16 +1,11 @@
+
+using namespace std;
 class QLNS:public NhanSu
 {
 private:
-    /* data */
+    vector<NhanSu> dsNhanSu;
 public:
-    QLNS(/* args */);
-    ~QLNS();
+    void nhap();
+    void xuat();
+    float tinhLuong();
 };
-
-QLNS::QLNS(/* args */)
-{
-}
-
-QLNS::~QLNS()
-{
-}

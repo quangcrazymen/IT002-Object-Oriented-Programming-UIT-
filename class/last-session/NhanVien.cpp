@@ -1,18 +1,7 @@
 #include "NhanVien.h"
 using namespace std;
 
-// global function to calculate number of certain project type
-static int numberOfXProject(char pro,vector<string>&list){
-    int count=0;
-    for(auto &i:list){
-        if(i[0]==pro){
-            count+=1;
-        }
-    }
-    return count;
-}
-
-NhanVien::NhanVien(string ten="",string date="",string ma="")
+NhanVien::NhanVien(string ten="",string date="")
 {
     this->name = ten;
     this->date = date;
