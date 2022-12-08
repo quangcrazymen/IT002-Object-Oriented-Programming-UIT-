@@ -4,7 +4,6 @@ class TroGiang:public NhanSu
 private:
     int soMonTroGiang;
 public:
-    TroGiang(/* args */);
     void nhap();
     void xuat();
     float tinhLuong(){
@@ -12,6 +11,3 @@ public:
     }
 };
 
-TroGiang::TroGiang(/* args */)
-{
-}

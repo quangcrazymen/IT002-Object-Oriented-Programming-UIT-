@@ -1,5 +1,5 @@
 #include "QLNS.h"
-
+#include <iostream>
 using namespace std;
 
 void QLNS::nhap(){
@@ -9,7 +9,7 @@ void QLNS::nhap(){
     for(int i =0;i<n;i++){
         cout<<"Giảng viên nhập,trợ giảng, nghiên cứu viên, chuyên viên? {1, 2, 3, 4}:";
         int option;cin>>option;
-        NhanSu *tmp;
+        NhanSu *tmp = NULL;
         switch (option)
         {
         case 1:
@@ -20,20 +20,21 @@ void QLNS::nhap(){
             break;
         case 3: 
             tmp=new NghienCuuVien();
+            break;
         case 4:
-            tmp=new ChuyenVien();
+            tmp= new ChuyenVien();
+            break;
+
         default:
             break;
         }
         tmp->nhap();
         this->dsNhanSu.push_back(tmp);
 }
-
-
-
+}
 void QLNS::xuat(){
     for(NhanSu* nhansu:dsNhanSu){
-        nhansu->Xuat();
+        nhansu->xuat();
     }
 }
 
@@ -42,4 +43,5 @@ float QLNS::tinhLuong(){
     for(NhanSu *nhansu:dsNhanSu){
         TongLuong+=nhansu->tinhLuong();
     }
+    return TongLuong;
 }

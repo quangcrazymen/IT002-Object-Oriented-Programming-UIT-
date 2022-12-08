@@ -1,6 +1,6 @@
 using namespace std;
 
-class ChuyenVien
+class ChuyenVien: public NhanSu
 {
 private:
     vector<string> duAnGiaoDuc;
@@ -8,7 +8,6 @@ private:
 public:
     void nhap();
     void xuat();
-    ChuyenVien(/* args */);
     int numberOfTProject(){
         int count=0;
         for(auto &i:duAnGiaoDuc){

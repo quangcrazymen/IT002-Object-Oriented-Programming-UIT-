@@ -1,6 +1,6 @@
 CFLAGS = -std=c++17 -O2
 
-VulkanTest: main.cpp NhanSu.cpp NhanSu.h GiangVien.cpp GiangVien.h TroGiang.cpp TroGiang.h NghienCuuVien.cpp NghienCuuVien.h ChuyenVien.cpp ChuyenVien.h
+VulkanTest: main.cpp NhanSu.cpp NhanSu.h GiangVien.cpp GiangVien.h TroGiang.cpp TroGiang.h NghienCuuVien.cpp NghienCuuVien.h ChuyenVien.cpp ChuyenVien.h QLNS.cpp QLNS.h
 	g++ $(CFLAGS) -o VulkanTest main.cpp
 .PHONY: test clean
 

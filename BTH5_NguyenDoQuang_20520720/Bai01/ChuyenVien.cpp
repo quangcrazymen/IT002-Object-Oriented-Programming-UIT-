@@ -1,8 +1,7 @@
 #include "ChuyenVien.h"
 using namespace std;
 
-ChuyenVien::ChuyenVien(/* args */)
-{
+void ChuyenVien::nhap(){
     NhanSu::nhap();
     cout<<"Số năm kinh nghiệm: ";
     cin>>this->knLamViec;
@@ -12,7 +11,7 @@ ChuyenVien::ChuyenVien(/* args */)
     string project;
     for(int i=0;i<n;i++){
         cin>>project;
-        this->duAnGiaoDuc.push_back(project):
+        this->duAnGiaoDuc.push_back(project);
     }
 }
 

@@ -2,8 +2,7 @@
 using namespace std;
 void TroGiang::nhap()
 {
-NhanSu:
-    nhap();
+    NhanSu::nhap();
     cout << "Nhập vào số môn học trợ giảng:";
     int n;
     cin >> this->soMonTroGiang;

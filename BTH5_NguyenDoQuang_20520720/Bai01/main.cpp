@@ -10,13 +10,8 @@
 using namespace std;
 
 int main(){
-    GiangVien a("Nguyen Van A","1/2/2000","12345678","TienSi","Pho giao su",12);
-    NghienCuuVien b(2,vector<string>{"D01","D02","F21"});
-    NhanSu* test = new NghienCuuVien(2,vector<string>{"D01","D02","F21"});
-    
-    cout<<test->tinhLuong();
-    // a.xuat();
-    printf("hello0");
+    QLNS management;
+    management.nhap();
+    management.xuat();
+    cout<<"Tổng lương của nhân sự là: "<<management.tinhLuong()<<'\n';
 }
-// class quan li nhan su
-// vector<NhanSu*> 

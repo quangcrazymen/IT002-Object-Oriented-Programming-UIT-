@@ -13,21 +13,16 @@ static int random(int min, int max) {
 
 class DongVat
 {
-private:
+protected:
     int soLuongCon;
     int soLitSua;
 public:
-    DongVat(/* args */);
     // Input and Output
-    virtual void keu();
-    virtual void luongSua();
-    ~DongVat();
+    virtual void keu(){
+        cout<<"Dong vat"<<endl;
+    }
+    virtual void luongSua(){
+        cout<<"Luong suu la: "<<this->soLitSua<<'\n';
+    }
+    void xuat();
 };
-
-DongVat::DongVat(/* args */)
-{
-}
-
-DongVat::~DongVat()
-{
-}

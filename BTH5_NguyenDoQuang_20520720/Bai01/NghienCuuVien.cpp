@@ -1,11 +1,11 @@
 #include "NghienCuuVien.h"
 using namespace std;
 
-NghienCuuVien::NghienCuuVien(int kn,vector<string> duAn){
-    this->duAnNghienCuu = duAn;
-    this->knNghienCuu=kn;
+// NghienCuuVien::NghienCuuVien(int kn=0,vector<string> duAn=vector<string>{""}){
+//     this->duAnNghienCuu = duAn;
+//     this->knNghienCuu=kn;
 
-}
+// }
 
 void NghienCuuVien::nhap(){
     NhanSu::nhap();
