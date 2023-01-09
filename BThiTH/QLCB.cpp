@@ -1,24 +1,25 @@
 #include "QLCB.h"
+#include<ostream>
 using namespace std;
 
 void QLCB::nhap(istream &is)
 {
     int n;
-    cout << "Số cán bộ:";
+    cout << "So Nhan su:";
     cin >> n;
     for (int i = 0; i < n; i++)
     {
-        cout << "Cán bộ nhà nước hay cán bộ hợp đồng? {1, 2}:";
+        cout << "Cán bộ giảng dạy, cán bộ chuyên viên? {1, 2}:";
         int option;
         cin >> option;
         CanBo *tmp = NULL;
         switch (option)
         {
         case 1:
-            tmp = new CanBoNhaNuoc();
+            tmp = new CanBoGiangVien();
             break;
         case 2:
-            tmp = new CanBoHopDong();
+            tmp = new CanBoChuyenVien();
             break;
         default:
             break;
@@ -30,16 +31,23 @@ void QLCB::nhap(istream &is)
 }
 void QLCB::xuat(ostream &os)
 {
-    for (CanBo *nhanvien : dsCanBo)
+    for (CanBo *canbo : dsCanBo)
     {
-        nhanvien->xuat(os);
+        canbo->xuat(os);
     }
 }
 
-int QLCB::tinhLuong(){
-    int sum;
-    for (CanBo *canbo:this->dsCanBo){
-        sum += canbo->tinhLuong();
+void QLCB::XuatHoanThanhXuatSac(){
+    // Tra ve 2 la hoan thanh xuat sac
+    for(CanBo *canbo : dsCanBo)
+    {
+        if(canbo->hoanThanhNhiemVu()==2){
+            cout<<*canbo;
+        }
     }
-    return sum;
+}
+
+void QLCB::XuatLuongGiamDan()
+{
+
 }

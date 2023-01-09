@@ -15,11 +15,5 @@ int main(){
     QLCB a;
     cin>>a;
     cout<<a;
-    // CanBo *a= new GiangVien();
-    // cin>>*a;
-    // cout<<*a;
-    // cout<<"Tổng lương của nhân sự là: "<<management.tinhLuong()<<'\n';
-    // CanBo *b=new NghienCuuVien();
-    // cin>>*b;
-    // cout<<*b;
+    cout<<"Tổng tiền lương mà công ty phải trả cho cán bộ là:"<<a.tinhLuong()<<endl;
 }

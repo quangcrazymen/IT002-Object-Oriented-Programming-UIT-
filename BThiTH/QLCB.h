@@ -6,5 +6,6 @@ private:
 public:
     void nhap(istream &is);
     void xuat(ostream &os);
-    int tinhLuong();
+    void XuatHoanThanhXuatSac();
+    void XuatLuongGiamDan();
 };
